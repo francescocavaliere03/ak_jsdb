@@ -7,7 +7,7 @@
     "start": "nodemon test.js"
   },
   "author": "Alkemika Lab",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/francescocavaliere03/ak_jsdb.git"
