@@ -1,1 +1,1 @@
-# Query mysql for nodejs
+# The Lightweight Nodejs Database Framework
