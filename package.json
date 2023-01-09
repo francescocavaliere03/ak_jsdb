@@ -1,0 +1,29 @@
+{
+  "name": "ak_jsdb",
+  "version": "1.0.3",
+  "description": "Gestione db",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon test.js"
+  },
+  "author": "Alkemika Lab",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francescocavaliere03/ak_jsdb.git"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "typescript": "^4.7.4"
+  },
+  "bugs": {
+    "url": "https://github.com/francescocavaliere03/ak_jsdb/issues"
+  },
+  "homepage": "https://github.com/francescocavaliere03/ak_jsdb#readme",
+  "directories": {
+    "lib": "lib"
+  }
+}
