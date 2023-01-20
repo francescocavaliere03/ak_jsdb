@@ -1,10 +1,10 @@
 {
   "name": "ak_jsdb",
-  "version": "1.0.3",
+  "version": "1.0.10",
   "description": "Gestione db",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon test.js"
+    "start": "nodemon test4.js"
   },
   "author": "Alkemika Lab",
   "license": "ISC",

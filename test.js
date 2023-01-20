@@ -2,6 +2,7 @@ const {akdb,akquery,aktable} = require('./index');
 
 const table = new aktable();
 const querydb = new akquery();
+const db = new akdb();
 //table.CreateTable("tb_utenti");
 //table.RenameTable("ciao","tb_utenti");
 //table.EmptyTable("tb_utenti");
