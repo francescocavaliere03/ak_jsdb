@@ -1,4 +1,4 @@
-const {akdb,akquery,aktable} = require('./index');
+const { akdb, akquery, aktable } = require('./index');
 
 const table = new aktable();
 const querydb = new akquery();
@@ -143,26 +143,42 @@ let nome = "la"
 let limit = 100
 let where = { "AND": { "eta#>": eta, "nome#@": nome } }
 
-const datatest = () => {
+async function datatest() {
     let result;
-    return result = querydb.select(tableName).where(where).limit(limit).run()
+    return result = await querydb.findOne(tableName).where(where).limit(100).run()
 }
 
+datatest().then((res) => {
+    console.log(res.nome)
+})
 
-let values = {
-    nome: 'saverio',
-    cognome: 'ruoccolo',
-    "eta": "5"
+const updatedb = new akquery();
+
+async function datatest2() {
+    let values = {
+        nome: 'saverio',
+        cognome: 'ruoccolo',
+        email: 'sssssss',
+        "eta": "5"
+    }
+    try {
+        await updatedb.update(tableName, values).where({ "AND": { "id": 1046 } }).run().then((res) => {
+            console.log(res)
+            return res
+        }).catch((err) => {
+            console.log(`Error: ${err}`)
+        })
+    } catch (err) {
+        console.log(`Error: ${err}`) 
+    }
 }
 
-try {
-    querydb.update(tableName,values).where({ "AND": { "id": 1046 } }).run().then((res) => { 
-        console.log(res) 
-        return res
-    }).catch((err) => {
-        console.log(`Error: ${err}`)
-    })
-} catch (err) {
-    console.log(`Error: ${err}`)
-}
+datatest().then((res) => {
+    console.log(res.nome) 
+})
+
+datatest2().then((res) => {
+    //console.log(res)
+})
+
 //querydb.Close()
