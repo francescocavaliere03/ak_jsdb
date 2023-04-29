@@ -1,6 +1,6 @@
 {
   "name": "ak_jsdb",
-  "version": "1.1.17",
+  "version": "1.1.20",
   "description": "Gestione db",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "url": "git+https://github.com/francescocavaliere03/ak_jsdb.git"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
