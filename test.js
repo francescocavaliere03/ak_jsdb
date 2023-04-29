@@ -145,12 +145,12 @@ let where = { "AND": { "eta#>": eta, "nome#@": nome } }
 
 async function datatest() {
     let result;
-    return result = await querydb.findOne(tableName).where(where).limit(100).run()
+    return result = await querydb.findOne(tableName,["@nome","cognome#ciao"]).where(where).limit(100).run()
 }
 
-datatest().then((res) => {
-    console.log(res.nome)
-})
+// datatest().then((res) => {
+//     console.log(res.nome)
+// })
 
 const updatedb = new akquery();
 
@@ -174,11 +174,11 @@ async function datatest2() {
 }
 
 datatest().then((res) => {
-    console.log(res.nome) 
+    console.log(res) 
 })
 
-datatest2().then((res) => {
-    //console.log(res)
-})
+// datatest2().then((res) => {
+//     //console.log(res) 
+// })
 
 //querydb.Close()
